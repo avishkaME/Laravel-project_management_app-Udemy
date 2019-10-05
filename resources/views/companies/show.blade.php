@@ -31,7 +31,7 @@
 <main role="main">
   <div class="row d-flex">
   
-  <div class="col-md-9 pull-left">
+  <div class="col-md-9 col-sm-9 pull-left">
     <div class="container marketing">
 
   <div class="jumbotron">
@@ -71,7 +71,7 @@
           <div class="sidebar-module">
             <h4>Actions</h4>
             <ol class="list-unstyled">
-              <li><a href="#">Edit</a></li>
+              <li><a href="/companies/{{ $company->id }}/edit">Edit</a></li>
               <li><a href="#">Delete</a></li>
               <li><a href="#">Add a new member</a></li>
             </ol>
