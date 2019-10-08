@@ -72,6 +72,8 @@
             <h4>Actions</h4>
             <ol class="list-unstyled">
               <li><a href="/companies/{{ $company->id }}/edit">Edit</a></li>
+              <li><a href="/projects/create">ADD project</a></li>
+              
 
               <li>
                 <a href="#" 
@@ -82,14 +84,14 @@
                         document.getElementById('delete-form').submit();
                       }">Delete
                 </a>
-                
+
+                <li><a href="/companies">All Companies</a></li>
+
                 <form id="delete-form" action="{{ route('companies.destroy',[$company->id]) }}" method="post" style="display: none;">
                   <input type="hidden" name="_method" value="delete">
                   {{ csrf_field()}}
                 </form>
               </li>
-
-              <li><a href="#">Add a new member</a></li>
             </ol>
           </div>
           <div class="sidebar-module">
