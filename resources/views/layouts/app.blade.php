@@ -42,11 +42,6 @@
                          <li class="nav-item active">
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
                         </li>
                         <!-- Authentication Links -->
                         @guest
@@ -59,6 +54,15 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('companies.index') }}">All Companies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('projects.index') }}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('tasks.index') }}">Tasks</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

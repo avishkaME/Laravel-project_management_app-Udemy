@@ -51,6 +51,7 @@
 
     <!-- Three columns of text below the carousel -->
     <div class="row pt-5" style="background: white; margin: 10px;">
+      <a href="/projects/create" class="btn btn-primary btn-sm" style="float: right;">ADD project</a>
         @foreach ($company->projects as $project)
             <div class="col-lg-4">
                 {{-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> --}}
@@ -92,23 +93,6 @@
                   {{ csrf_field()}}
                 </form>
               </li>
-            </ol>
-          </div>
-          <div class="sidebar-module">
-            <h4>Archives</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
             </ol>
           </div>
       </div>
