@@ -6,22 +6,22 @@
   <div class="row d-flex">
   
         <div class=" col-md-9 col-sm-9 pull-left">
-            <h3>Create new company</h3>
             <div class="container">
             <!-- Three columns of text below the carousel -->
                 <div class="row pt-5 col-md-12 col-lg-12 col-sm-12" style=" margin: 10px;">
                     <div class="container">
-                        <form action="{{ route('companies.store')}}" class="form-control" method="POST">
+                        <form action="{{ route('projects.update',[$project->id])}}" class="form-control" method="POST">
                             {{ csrf_field() }}
+                            <input type="hidden" name="_method" value="put">
 
                             <div class="form-group">
-                                <label for="company-name">Name</label>
-                                <input type="text" name="name" id="company-name" class="form-control" placeholder="Enter name" required>
+                                <label for="project-name">Name</label>
+                                <input type="text" name="name" id="project-name" class="form-control" placeholder="Enter name" value="{{ $project->name}}" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="company-content">Description</label>
-                                <textarea name="description" id="company-content" class="form-control autosize-target text-left" placeholder="Enter description" rows="5" style="resize: verticle;"></textarea>
+                                <label for="project-content">Description</label>
+                                <textarea name="description" id="project-content" class="form-control autosize-target text-left" placeholder="Enter description" rows="5" style="resize: verticle;">{{ $project->description}}</textarea>
                             </div>
 
                             <div class="form-group">
@@ -36,7 +36,8 @@
         <div class="sidebar-module">
             <h4>Actions</h4>
             <ol class="list-unstyled">
-                <li><a href="/companies">Company list</a></li>
+                <li><a href="/projects/{{ $project->id }}">View project</a></li>
+                <li><a href="/projects">project list</a></li>
             </ol>
         </div>
     </div>
