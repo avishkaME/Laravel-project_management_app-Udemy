@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ec9688e753.js"></script>
+     
 </head>
 <body>
     <div id="app">
@@ -40,7 +42,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                          <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
                             </li>
                         </li>
                         <!-- Authentication Links -->
@@ -55,13 +57,13 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('companies.index') }}">All Companies</a>
+                                <a class="nav-link" href="{{ route('companies.index') }}"><i class="far fa-building"></i> All Companies</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('projects.index') }}">Projects</a>
+                                <a class="nav-link" href="{{ route('projects.index') }}"><i class="fas fa-project-diagram"></i> Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('tasks.index') }}">Tasks</a>
+                                <a class="nav-link" href="{{ route('tasks.index') }}"><i class="fas fa-tasks"></i> Tasks</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
