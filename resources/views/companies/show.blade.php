@@ -51,7 +51,7 @@
 
     <!-- Three columns of text below the carousel -->
     <div class="row pt-5" style="background: white; margin: 10px;">
-      <a href="/projects/create" class="btn btn-primary btn-sm" style="float: right;">ADD project</a>
+      <a href="/projects/create/{{ $company->id }}" class="btn btn-primary btn-sm" style="float: right;">ADD project</a>
         @foreach ($company->projects as $project)
             <div class="col-lg-4">
                 {{-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> --}}
@@ -73,7 +73,7 @@
             <h4>Actions</h4>
             <ol class="list-unstyled">
               <li><a href="/companies/{{ $company->id }}/edit">Edit</a></li>
-              <li><a href="/projects/create">ADD project</a></li>
+              <li><a href="/projects/create/{{ $company->id }}">ADD project</a></li>
               
 
               <li>
